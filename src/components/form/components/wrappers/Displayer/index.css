@@ -1,0 +1,14 @@
+/* .displayer {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.displayer>.title {
+  background-color: bisque;
+  align-items: center;
+}
+
+.displayer>.children {
+  align-items: center;
+} */

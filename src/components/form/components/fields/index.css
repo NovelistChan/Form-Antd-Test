@@ -1,0 +1,31 @@
+/* .field.array {
+  display: inline-flex;
+}
+
+.field.object {
+  background-color: aqua;
+  display: flex ;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.field.object>* {
+  background-color: wheat;
+  border: 1px black solid;
+  flex: 1;
+} */
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
