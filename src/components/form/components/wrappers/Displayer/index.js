@@ -3,11 +3,11 @@ import React from 'react'
 
 export default function (props) {
 
-  const title = typeof props.title === "object" ? props.title.text : props.title
+  const description = typeof props.description === "object" ? props.description.text : props.description
 
   return (
     <div className={`wrapper displayer ${props.unvisible}`} >
-      <div className="title">{title}</div>
+      <div className="description">{description}</div>
       <div className="children">{props.children}</div>
     </div>
   )

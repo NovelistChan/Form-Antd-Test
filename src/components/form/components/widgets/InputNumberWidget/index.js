@@ -1,10 +1,8 @@
 import React from 'react'
 import { InputNumber } from 'antd'
 export default function (props) {
-    const { data, onChange } = props
 
-    function onChangeNum(e, value) {
-        console.log('changed', value)
+    function onChangeNum(value) {
         props.onChange(value)
     }
     // return <InputNumber placeholder="请输入数值..."

@@ -3,5 +3,5 @@ import Validator from './Validator'
 
 export default [
   { property: "rules", component: Validator },
-  { property: "title", component: Displayer },
+  { property: "description", component: Displayer },
 ]

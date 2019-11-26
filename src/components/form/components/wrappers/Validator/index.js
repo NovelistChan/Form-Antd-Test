@@ -9,6 +9,7 @@ export default function (props) {
 
   rules.forEach((rule, index) => {
     const re = new RegExp(rule.regex)
+    console.log("validate", formData)
     if (typeof formData === "string" && !formData.match(re))
       hints.push(<div className="info" key={index}>{rule.info}</div>)
   })

@@ -12,7 +12,7 @@ class ArrayTableField extends React.Component {
       <div>
         <Button onClick={this.handleAdd} type="primary">Add</Button>
         <Table columns={this.columnsParser(schema.columns)} 
-        dataSource={formData || schema.default || utils.default("arrayTable")}
+        dataSource={formData || schema.default || utils.default.parser("arrayTable")}
         scroll = {{x:1500, y:300}} 
         rowKey = {schema.key}
         />
@@ -22,7 +22,7 @@ class ArrayTableField extends React.Component {
 
   handleAdd = () => {
     let formData = this.props.formData
-    formData.push(this.props.schema.default || utils.default("arrayTable"))
+    formData.push(this.props.schema.default || utils.default.parser("arrayTableItem"))
     this.props.onChange(formData)
   }
 
@@ -47,6 +47,7 @@ class ArrayTableField extends React.Component {
             let formData = this.props.formData
             formData[index][column] = data
             this.props.onChange(formData)
+            // console.log("parse", formData, data)
           }} />)
     }))
     basic.unshift({

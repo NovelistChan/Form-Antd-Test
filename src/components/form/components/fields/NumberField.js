@@ -13,7 +13,8 @@ export default function (props) {
     return (
         <div>
             <Widget placeholder="Please Input" value={props.formData}
-                onChange={value => props.onChange(value)} />
+                onChange={value => {props.onChange(value) 
+                console.log(value)}} />
         </div>
     )
 }

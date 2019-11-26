@@ -35,7 +35,7 @@ export default function (props) {
 
   const addHandler = _ => {
     let value = formData
-    value.push(schema.items.default || utils.default(schema.items.type))
+    value.push(schema.items.default || utils.default.parser(schema.items.type))
     onChange(value)
   }
 

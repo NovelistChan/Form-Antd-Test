@@ -32,7 +32,15 @@ class Group extends React.Component {
               schema={groups[group]}
               formData={datas[group]}
               global={{}}
-              onChange={data => this.setState({ formData: { ...this.state.formData, ...data } }, _ => onChange && onChange(this.state.formData))}
+              onChange={data => {
+                console.log(data)
+                console.log(formData)
+                this.setState({ 
+                  formData: { ...this.state.formData, ...data } 
+                }, 
+                _ => onChange && onChange(this.state.formData))
+              }
+            }
             />
           </Panel>
         ))}
@@ -41,7 +49,7 @@ class Group extends React.Component {
   }
 
   state = {
-    formData: this.props.formData || this.props.schema.default || utils.default(this.props.schema.type)
+    formData: this.props.formData || this.props.schema.default || utils.default.parser(this.props.schema.type)
   }
 }
 

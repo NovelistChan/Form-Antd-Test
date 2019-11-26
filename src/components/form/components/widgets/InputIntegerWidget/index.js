@@ -3,7 +3,7 @@ import { InputNumber } from 'antd'
 export default function (props) {
     const { data, onChange } = props
 
-    function onChangeNum(e, value) {
+    function onChangeNum(value) {
         console.log('changed', value)
         props.onChange(value)
     }

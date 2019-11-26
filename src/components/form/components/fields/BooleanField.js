@@ -4,7 +4,7 @@ import { Input, Checkbox } from 'antd'
 export default function (props) {
 
     function onChangeRadio(value) {
-        console.log(value)
+        // console.log(value)
         props.onChange(value)
     }
 

@@ -10,12 +10,15 @@ export default function (props) {
     <div className="field object" >
       {Object.keys(schema.properties).map(name => {
         const subSchema = schema.properties[name]
+        // if(subSchema.type==="date"){
+        //   console.log(subSchema)
+        // }
         return (
           <Package
             key={name}
             schema={subSchema}
             global={global}
-            formData={formData[name] || subSchema.default || utils.default(subSchema.type)}
+            formData={formData[name] || subSchema.default || utils.default.parser(subSchema.type)}
             onChange={data => {
               let value = { ...formData }
               value[name] = data

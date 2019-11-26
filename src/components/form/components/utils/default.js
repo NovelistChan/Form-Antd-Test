@@ -5,13 +5,14 @@ let _default = {
   "number": _ => "",
   "integer": _ => "",
   "boolean": _ => "",
-  "arrayTable": _=> ([])
+  "arrayTable": _=> ([]),
+  "arrayTableItem": _=>({})
 }
 
 export function register(extensions) {
   _default = { ..._default, ...extensions }
 }
 
-export default function (type) {
+export function parser(type) {
   return _default[type]()
 }
