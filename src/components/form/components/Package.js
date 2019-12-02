@@ -13,7 +13,7 @@ export default function (props) {
       const Wrapper = wrapper.component
       var properties = {}
       properties[wrapper.property] = props.schema[wrapper.property]
-      console.log("pakage", props.formData)
+      // console.log("pakage", props.formData)
       Package = (
         <Wrapper {...properties} formData={props.formData} global={props.global}>
           {Package}

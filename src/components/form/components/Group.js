@@ -33,8 +33,8 @@ class Group extends React.Component {
               formData={datas[group]}
               global={{}}
               onChange={data => {
-                console.log(data)
-                console.log(formData)
+                // console.log(data)
+                // console.log(formData)
                 this.setState({ 
                   formData: { ...this.state.formData, ...data } 
                 }, 

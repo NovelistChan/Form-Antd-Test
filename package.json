@@ -1,7 +1,7 @@
 {
   "name": "form-antd",
   "main": "dist/main.js",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "dependencies": {
     "antd": "^3.25.2",
     "react": "^16.12.0",

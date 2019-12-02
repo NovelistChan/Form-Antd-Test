@@ -4,7 +4,7 @@ export default function (props) {
     const { data, onChange } = props
 
     function onChangeNum(value) {
-        console.log('changed', value)
+        // console.log('changed', value)
         props.onChange(value)
     }
     // return <InputNumber placeholder="请输入数值..."
